@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #1c1c4a 0%, #2e2e6a 100%);
+    color: white;
+}
+
+header {
+    text-align: center;
+    background-color: #2e2e6a;
+}
+header h1 {
+    font-size: 2.5rem;
+}
+
+nav {
+    margin-top: 1rem;
+}
+nav a{
+    color: #b6caff;
+    margin: 0 10px;
+    text-decoration: none; /* remove underline*/
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+nav a:hover{
+    color: white;
+}
+
+
+main {
+    max-width: 1300px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+    text-align: left;
+}
+main h1 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+main h2 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+main h3{
+    margin-top: 1rem;
+    margin-bottom: 0.35rem;
+}
+main p {
+    margin-bottom: 1rem;
+}
+main li {
+    margin-bottom: 0.25rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #151538;
+    font-size: 1rem;
+    margin-top: 3rem;
+}
+
+nav.ancoras a{
+    margin: 0; /*reset sobre o nav do header*/
+    color: #b6caff;
+    text-decoration: none; /* remove underline*/
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+nav.ancoras a:hover{
+    color: white;
+}
+
+.fotografias {
+    max-width: 75%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 1rem;
+}
+.fotografias img {
+    width: 150px;
+    border-radius: 20px;
+}
+
+.poesia{
+    background-color: #151538; 
+    border-radius: 25px;
+    padding: 15px;
+    max-width: 35%;
+}
+.poesia h3 {
+    text-align: center;
+}
+.poesia p {
+    font-weight: bold;
+    margin: 3px;
+}
+/* Isto simula a bandeira portuguesa :)*/
+.poesia p:nth-child(3n+2) {
+    color: red;
+}
+.poesia p:nth-child(3n) {
+    color: rgb(209, 195, 0); /* este tom é mais fácil de ler do que yellow */
+}
+.poesia p:nth-child(3n+1) {
+    color: green;
+}
+.poesia p:last-child{
+    color:white;
+}
+
+
+th, td {
+    border: 1px solid; /* solid apresenta as bordas */
+    padding: 8px;
+    text-align: center;
+    color: black;
+}
+th {
+    background-color: grey;
+}
+td {
+    background-color: white;
+}
