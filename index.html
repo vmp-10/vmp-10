@@ -1,45 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vlad Prisacaru</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <header>
-        <h1>O meu primeiro site</h1>
-        <h2>Projetos</h2>
-        <nav>
-            <ul>
-                <li><a href="Lab1/cidade/index.html">Lab1</a></li>
-                <li><a href="Lab2/cidade/index.html">Lab2</a></li>
-            </ul>
+        <h1>Navegação</h1>
+        <nav class="ancoras">
+            <a href="#projetos">Projetos</a>
+            <a href="#cadeira">Cadeira</a>
         </nav>
     </header>
 
     <main>
-        <p>Eis a minha primeira página web</p>
-        <p>
-            Na Unidade Curricular de 
-            <a href="https://moodle.ensinolusofona.pt/course/view.php?id=11232"> 
-                Desenvolvimento  de Interfaces Web 
-            </a>
-        abordaremos as seguintes teconologias de web &#127760;:
-        </p>
-        <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>React e Next.js</li>
-        </ul>
+        <section id="hero-page">
+            <div class="hero-content">
+                <h2>Vlad Prisacaru</h2>
+                <p>Estudante de <strong>Engenharia Informática</strong> na Universidade Lusófona.
+                    Aqui partilho os meus laboratórios, projetos e experiências na cadeira de web.</p>
+            </div>
+        </section>
 
-        <p>Iremos criar soluções criativas!</p>
-        <img src="/images/diw.svg" alt="Desenvolvimento  de Interfaces Web" width= 200px>
+        <section id="projetos">
+            <h2>Projetos - Labs</h2>
+            <h3>Alguns projetos desenvolvidos em aula</h3>
+            <div class="flex-container">
+                <a href="Lab1/cidade/index.html" class="flex-card" title= "Lab1">
+                    <h4>Lab 1</h4>
+                    <p>Exploração de <strong>HTML</strong> semântico e estrutura básica.</p>
+                </a>
+                <a href="Lab2/cidade/index.html" class="flex-card" title= "Lab2">
+                    <h4>Lab 2</h4>
+                    <p>Introdução ao <strong>CSS</strong>: cores, layouts e seletores básicos.</p>
+                </a>
+                <a href="Lab3/cidade/index.html" class="flex-card" title= "Lab3">
+                    <h4>Lab 3</h4>
+                    <p>Primeiros passos com <strong>responsividade</strong> via Media Query</p>
+                </a>
+            </div>
+
+            <h3>Alguns exercicios desenvolvidos</h3>
+            <div class=flex-container>
+                <a href="Lab2/exercicios.html" class="flex-card" title= "Lab2 - Exercicios">
+                    <h4>Lab 2 - Exercicios</h4>
+                    <p>Exericios de CSS no <strong>CodePen</strong></p>
+                </a>
+                <a href="Lab3/exercicios.html" class="flex-card" title= "Lab3 - Exercicios">
+                    <h4>Lab 3 - Exercicios</h4>
+                    <p>Exercicios de CSS Grid-Box, Media query e Flexbox no <strong>CodePen</strong></p>
+                </a>
+            </div>
+        </section>
+
+        <section id="cadeira">
+            <h2>Unidade Curricular - Desenvolvimento Web</h2>
+            <div class="flex-container">
+                <div class="flex-card">
+                    <h4>HTML</h4>
+                    <p>Estrutura semântica e conteúdos estáticos.</p>
+                </div>
+                <div class="flex-card">
+                    <h4>CSS</h4>
+                    <p>Estilização, layouts e animações.</p>
+                </div>
+                <div class="flex-card">
+                    <h4>JavaScript</h4>
+                </div>
+            </div>
+
+            <p>Iremos criar soluções criativas!</p>
+            <img src="/images/diw.svg" alt="Desenvolvimento  de Interfaces Web" width=200px>
+        </section>
     </main>
 
     <footer>
         <p>Universidade Lusófona @ 2025</p>
     </footer>
 </body>
+
 </html>

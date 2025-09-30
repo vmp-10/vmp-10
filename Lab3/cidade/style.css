@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(45deg, #1c1c4a, #2e2e6a);
+    color: white;
+    font-family: sans-serif;
+    line-height: 1.5;
+}
+
+header,
+footer {
+    text-align: center;
+    background-color: #2e2e6a;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+    padding: 1rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.25rem;
+}
+
+footer {
+    background-color: #151538;
+    font-size: 1rem;
+    margin-top: 3rem;
+}
+
+nav a {
+    color: #b6caff;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.8rem;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: white;
+}
+
+main {
+    max-width: 1300px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+}
+
+main h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+main h3 {
+    margin: 1rem 0 0.35rem;
+}
+
+main p {
+    margin-bottom: 1rem;
+}
+
+main ul {
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+}
+
+main li {
+    margin-bottom: 0.25rem;
+}
+
+.info-card {
+    background-color: #24245a;
+    padding: 1rem;
+    border-radius: 10px;
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+table {
+    /*junta cada seccao sem gap*/
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+th,
+td {
+    border: 1px solid;
+    padding: 8px;
+    text-align: center;
+    color: black;
+}
+
+th {
+    background-color: grey;
+}
+
+td {
+    background-color: white;
+}
+
+section.local .info-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+section.local .top-row {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+section.local .top-row p {
+    /* p usa o espaco todo, basicamente flex-grow */
+    flex: 1;
+}
+
+section.local .top-row iframe {
+    max-width: 600px;
+    width: 100%;
+}
+
+section.infos {
+    display: grid;
+    grid-template-areas:
+        "img info"
+        "transportes interesses"
+        "tabela tabela";
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+section.infos .info-card{
+    min-width: 300px;
+    min-height: 250px;
+}
+
+section.infos img {
+    grid-area: img;
+    max-width: 500px;
+    border-radius: 0.75rem;
+    justify-self: center;
+}
+
+section.infos .info {
+    grid-area: info;
+}
+
+section.infos .transportes {
+    grid-area: transportes;
+}
+
+section.infos .interesses {
+    grid-area: interesses;
+}
+
+section.infos .tabela {
+    grid-area: tabela;
+}
+
+@media (max-width: 800px) {
+    section.local .top-row {
+        flex-direction: column;
+    }
+
+    section.local .info-card iframe {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    section.infos {
+        grid-template-areas:
+            "img"
+            "info"
+            "transportes"
+            "interesses"
+            "tabela";
+        grid-template-columns: 1fr;
+        justify-content: center;
+        align-items: center;
+    }
+
+    section.infos img {
+        max-width: 100%;
+    }
+}

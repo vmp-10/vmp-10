@@ -1,0 +1,179 @@
+/* 
+    Criei um .css diferente para esta pagina pk é muito complicado usar 
+    o css anterior para uma webpage completamente diferente 
+*/
+
+* {
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: white;
+    font-family: sans-serif;
+    line-height: 1.5;
+    background: linear-gradient(45deg, #1c1c4a, #2e2e6a);
+}
+
+header {
+    position: sticky;
+    top: 0;
+    text-align: center;
+    background-color: #2e2e6a;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+    padding: 1rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.25rem;
+    color: white;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+nav a {
+    color: #b6caff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.8rem;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: white;
+}
+
+footer {
+    text-align: center;
+    background-color: #151538;
+    font-size: 1rem;
+    margin-top: 3rem;
+    padding: 1rem;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.4);
+    color: white;
+}
+
+h2 {
+    font-size: 2rem;
+    margin: 1.5rem 0 1rem;
+    color: white; 
+}
+
+p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+section:nth-child(1) {
+    height: 90vh;
+    background: linear-gradient(to bottom, #1c1c4a, #2e2e6a); 
+    text-align: left;
+    padding: 2rem;
+}
+
+section:nth-child(2) {
+    height: 100vh;
+    background: linear-gradient(to bottom, #24245a, #2e2e6a); 
+    flex-direction: column;
+    text-align: left;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.fotografias-topo,
+.fotografias-baixo {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+/* estou farto de fazer css :( */
+.flex-container img {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.flex-card {
+    width: 250px;
+    min-height: 140px;
+    padding: 1.25rem;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: #24245a;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    transition: transform 0.2s, box-shadow 0.3s;
+}
+
+section.poesia p {
+    font-weight: bold;
+    margin: 0.25rem;
+    text-align: center;
+}
+
+/*isto simula a bandeira portuguesa. O index começa diferente por causa do h3*/
+.poesia p:nth-child(3n+1) {
+    color: green;
+}
+
+.poesia p:nth-child(3n+2) {
+    color: red;
+}
+
+.poesia p:nth-child(3n) {
+    /*mais facil de ler esta cor do que yellow*/
+    color: rgb(209, 195, 0);
+}
+
+.poesia p:last-child {
+    color: white;
+}
+
+@media (max-width: 750px) {
+    .fotografias-container {
+        text-align: center;
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 600px) {
+    section:nth-child(1),
+    section:nth-child(2){
+        height: auto; 
+        padding: 1rem;
+    }
+
+    .flex-container {
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .flex-card {
+        width: 90%; 
+        min-height: auto;
+        padding: 1rem;
+    }
+
+    .fotografias-container img {
+        max-width: 200px;
+    }
+}
