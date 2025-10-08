@@ -1,16 +1,15 @@
 
 //evento 1
-document.querySelector('#hover-text').addEventListener('mouseenter', mousehover);
-document.querySelector('#hover-text').addEventListener('mouseleave', mouseleave);
-
-function mousehover() {
+document.querySelector('#hover-text').addEventListener('mouseenter', function () {
     const element = document.querySelector('#hover-text');
     element.style.color = 'red';
-}
-function mouseleave() {
+});
+
+document.querySelector('#hover-text').addEventListener('mouseleave', function () {
     const element = document.querySelector('#hover-text');
     element.style.color = 'black';
-}
+});
+
 
 //evento2
 const pintar = document.querySelector('#pintar');
@@ -28,20 +27,17 @@ document.querySelector('#butao3').addEventListener('click', function () {
 const input = document.querySelector("#input");
 const colors = ["red", "brown", "pink", "yellow", "gray"];
 let i = 0;
-
-function changeBackgroundColor3() {
+input.addEventListener("input", function () {
     input.style.backgroundColor = colors[i];
     i = (i + 1) % colors.length;
-}
-input.addEventListener("input", changeBackgroundColor3);
+});
 
 //evvento 4
 const bgcolor = document.querySelector("#bgcolor");
 const sendcolor = document.querySelector("#sendcolor");
-function changeBackgroundColor() {
+sendcolor.addEventListener("click", function () {
     document.body.style.backgroundColor = bgcolor.value;
-}
-sendcolor.addEventListener("click", changeBackgroundColor);
+});
 
 // eventp 5
 let counter = 0;
