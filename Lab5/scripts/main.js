@@ -9,35 +9,61 @@ passa.addEventListener('mouseout', () => trocaTexto('1. passa por aqui!'));
 
 
 //evento2
-const pintar = document.querySelector('#pintar');
-function trocaCor(cor){
-    pintar.style.color = cor;
+const pinta = document.querySelector('#pinta p');
+function trocaCor(cor) {
+    pinta.style.color = cor;
 }
-document.querySelector('#butao1').addEventListener('click', () => trocaCor('Red'));
-document.querySelector('#butao2').addEventListener('click', () => trocaCor('Green'));
-document.querySelector('#butao3').addEventListener('click', () => trocaCor('Blue'));
+document.querySelector('#btn-r').addEventListener('click', () => trocaCor('Red'));
+document.querySelector('#btn-g').addEventListener('click', () => trocaCor('Green'));
+document.querySelector('#btn-b').addEventListener('click', () => trocaCor('Blue'));
 
 //evento3
 let i = 0;
 const input = document.querySelector("#input");
-const colors = ["red", "brown", "pink", "yellow", "gray"];
+const cores = ["red", "brown", "pink", "yellow", "gray"];
 input.addEventListener("input", function () {
-    input.style.backgroundColor = colors[i];
-    i = (i + 1) % colors.length;
+    input.style.background = cores[i];
+    i = ++i % cores.length;
 });
 
-//evvento 4
-const bgcolor = document.querySelector("#bgcolor");
+//evento 4
+document.querySelector('select').onchange = function() {
+    document.querySelector('#selects p').style.color = this.value;
+}
+
+//evvento 5
+const colorir = document.querySelector("#colorir");
+const color = document.querySelector("#color");
 const submit = document.querySelector("#submit");
 submit.addEventListener("click", function () {
-    document.body.style.backgroundColor = bgcolor.value;
+    colorir.style.background = color.value;
 });
 
-// eventp 5
-let counter = 0;
+// eventp 6
+if (!localStorage.getItem('counter')){
+    localStorage.setItem('counter', 0);
+}
+
 const contador = document.querySelector("#contador");
 const incrementar = document.querySelector("#incrementar");
-incrementar.addEventListener("click", function () {
+function count() {
+    let counter = localStorage.getItem('counter');
     counter++;
     contador.innerText = counter;
-});
+    localStorage.setItem('counter', counter);
+}
+incrementar.addEventListener('click', count);
+contador.innerText = localStorage.getItem('counter');
+
+//evento 7
+const clock_count = document.querySelector("#clock-count");
+if (!localStorage.getItem('clock')){
+    localStorage.setItem('clock', 0);
+}
+function clock() {
+    let tick = localStorage.getItem('clock');
+    tick++;
+    clock_count.innerText = tick;
+    localStorage.setItem('clock', tick);
+}
+setInterval(clock, 1000);

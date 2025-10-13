@@ -10,21 +10,44 @@
     <header></header>
 
     <main>
-        <p id="passa">1. passa por aqui!</p>
+        <section>
+            <p id="passa">1. passa por aqui!</p>
+        </section>
         
-        <p id="pintar">2.pinta-me!</p>
-        <button id="butao1">Red</button>
-        <button id="butao2">Green</button>
-        <button id="butao3">Blue</button>
+        <section id = "pinta">
+            <p>2.pinta-me!</p>
+            <button id="btn-r">Red</button>
+            <button id="btn-g">Green</button>
+            <button id="btn-b">Blue</button>
+        </section>
 
-        <p>3. Experimenta escrever com</p>
-        <input type="text" id="input" placeholder="Escreve algo...">
+        <section>
+            <p>3. Experimenta escrever com</p>
+            <input type="text" id="input" placeholder="Escreve algo...">
+        </section>
 
-        <p>4. Escreve uma cor em ingles</p>
-        <input type="text" id="bgcolor" placeholder="Ex.: red">
-        <button id="submit">Submeter</button>
+        <section id="selects">
+            <p>4. Escolha uma cor</p>
+            <select name="color" id="color-select">
+                <option value="red">Red</option>
+                <option value="green">Green</option>
+                <option value="blue">Blue</option>
+            </select>
+        </section>
 
-        <p>5. <button id="incrementar">Conta:</button> <span id="contador">0</span></p>
+        <section id= "colorir">
+            <p>5. Escreve uma cor em ingles</p>
+            <input type="text" id="color" placeholder="Ex.: red">
+            <button id="submit">Submeter</button>
+        </section>
+
+        <section>
+            <p>5. <button id="incrementar">Conta:</button> <span id="contador">0</span></p>
+        </section>
+
+        <section id= "clock">
+            <span id="clock-count">0</span>
+        </section>
     </main>
 
     <footer></footer>
