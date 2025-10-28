@@ -81,7 +81,7 @@ section:nth-child(1) {
 }
 
 section:nth-child(2) {
-    height: 100vh;
+    height: 120vh; 
     background: linear-gradient(to bottom, #3a0b66, #8c4de0); 
     flex-direction: column;
     text-align: left;
@@ -107,6 +107,7 @@ section:nth-child(3) {
 .flex-card {
     width: 250px;
     min-height: 140px;
+    max-height: 200px;
     padding: 1.25rem;
     color: white;
     text-decoration: none;
